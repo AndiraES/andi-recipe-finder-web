@@ -1,0 +1,187 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    padding: 2px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    list-style: none;
+}
+
+
+body {
+    width: 100%;
+    height: 100vh;
+    /* background: #fff; */
+    /* background-image: linear-gradient(rgba(18, 18, 18, 0.75), rgba(0,0,0,0.75)), url(fried\ rice.png); */
+    /* background-image: linear-gradient(rgba(132, 244, 109, 0.75), rgba(175, 217, 249, 0.75)); */
+    background-size: cover;
+    background-position: center;
+}
+
+#header {
+    text-align: center;
+    background: #fad579;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+#header h2 a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 35px;
+}
+
+#navbar {
+    display: flex;
+    background: #fad579;
+    justify-content: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 5px;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 5px;
+}
+
+#navbar li a {
+    text-decoration: none;
+    margin-left: 15px;
+    color: #fff;
+}
+
+#navbar li a:hover {
+    color: #2771f9;
+    transition: 0.4s;
+}
+
+.content {
+    margin-top: 35px;
+    text-align: center;
+}
+
+.content h4 {
+    font-size: 25px;
+    color: #000;
+}
+
+.content p {
+    margin-top: 7px;
+    color: #000;
+}
+
+.container {
+    margin: 20px auto 0;
+    padding: 10px; 
+    background: #e9e8e8;
+    width: 1000px;
+    border-radius: 5px;
+}
+
+/* fried Rice */
+
+.recipe-details {
+    text-align: center;
+}
+
+.recipe-details img {
+    /* background: #bf9964; */
+    height: 300px;
+    width: 280px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.recipe-details h3 {
+    color: #000;
+}
+
+.recipe-details p {
+    color: #000;
+}
+
+.ingredients-instructions ul {
+    margin-left: 15px;
+}
+
+.ingredients-instructions {
+    margin-top: 40px;
+}
+
+.instructions {
+    margin-top: 10px;
+}
+
+.instructions ol {
+    margin-left: 15px;
+}
+
+.instructions ol li {
+    list-style-type: decimal;
+}
+
+/* footer */
+
+footer {
+    margin-top: 10px;
+    background: #6b6b6b;
+    height: 180px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.header-footer {
+    text-align: center;
+}
+
+.header-footer .footer1 h3 {
+    background: #fad579;
+    color: #fff;
+    width: 73px;
+    padding: 4px;
+    border-radius: 5px;
+    margin: 10px auto 0;
+}
+
+.header-footer .footer1 .words {
+    margin-top: 10px;
+    color: #fff;
+}
+
+.header-footer .footer1 .social-logo {
+    margin-top: 7px;
+}
+
+.header-footer .footer1 .social-logo a {
+    background: #3b3131;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.header-footer .footer1 .social-logo a i {
+    color: #fff;
+}
+
+.header-footer .footer1 .social-logo a:hover {
+    background: #544a4a;
+    transition: 0.5s;
+}
+
+.copyright {
+    color: #fff;
+    margin-top: 30px;
+}
+
+
+@media (max-width: 799px) {
+    .container {
+        margin: 20px auto 0;
+        padding: 10px; 
+        background: #e9e8e8;
+        width: 95%;
+    }
+}

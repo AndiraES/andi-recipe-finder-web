@@ -1,0 +1,613 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    list-style: none;
+}
+
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(18, 18, 18, 0.75), rgba(0,0,0,0.75)), url(img/Background2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#header {
+    text-align: center;
+    background: #fad579;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+#header h2 a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 35px;
+}
+
+#navbar {
+    display: flex;
+    background: #fad579;
+    justify-content: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 5px;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 5px;
+}
+
+#navbar li a {
+    text-decoration: none;
+    margin-left: 15px;
+    color: #fff;
+}
+
+#navbar li a:hover {
+    color: #2771f9;
+    transition: 0.4s;
+}
+
+.content {
+    margin-top: 35px;
+    text-align: center;
+}
+
+.content h4 {
+    font-size: 25px;
+    color: #fff;
+}
+
+.content p {
+    margin-top: 7px;
+    color: #fff;
+}
+
+.slider {
+    position: relative;
+    justify-content: center;
+}
+
+.gallery {
+    width: 800px;
+    display: flex;
+    overflow-x: scroll;
+    margin-left: 15px;
+}
+
+.gallery div {
+    width: 100%;
+    display: flex;
+    gap: 0;
+    padding: 10px;
+    flex: none;
+}
+
+.gallery div img {
+    height: 200px;
+    width: 150px;
+    margin: 5px;
+    transition: transform 0.5s;
+}
+
+.gallery::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2% auto;
+}
+
+#backBtn, #nextBtn {
+    width: 50px;
+    cursor: pointer;
+    margin: 40px;
+    display: none;
+}
+
+.gallery div img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.recipes {
+    margin-top: 50px;
+}
+
+.foods-recipes {
+    display: grid;
+    grid-template-columns: repeat(5, 0.1fr);
+    justify-content: center;
+    grid-gap: 20px;
+    /* display: none; */
+}
+
+.foods-recipes div {
+    background: #fff;
+    padding: 5px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.foods-recipes div:hover {
+    background: #ededed;
+    transition: 0.5s;
+    box-shadow: 0px 2.5px 2.5px 0px #fff;
+}
+
+.foods-recipes div img {
+    height: 220px;
+    width: 190px;
+    border-radius: 7px;
+    border: 1px solid;
+}
+
+.foods-recipes .card div h5 {
+    font-size: 15px;
+    color: #000;
+}
+
+.foods-recipes .card div p {
+    font-size: 14px;
+    color: #000;
+}
+
+footer {
+    margin-top: 10px;
+    background: #6b6b6b;
+    height: 180px;
+    border-radius: 20px;
+    margin-bottom: 0px;
+    padding: 5px;
+}
+
+.header-footer {
+    text-align: center;
+}
+
+.header-footer .footer1 h3 {
+    background: #fad579;
+    color: #fff;
+    width: 73px;
+    padding: 4px;
+    border-radius: 5px;
+    margin: 10px auto 0;
+}
+
+.header-footer .footer1 .words {
+    margin-top: 10px;
+    color: #fff;
+}
+
+.header-footer .footer1 .social-logo {
+    margin-top: 7px;
+}
+
+.header-footer .footer1 .social-logo a {
+    background: #3b3131;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.header-footer .footer1 .social-logo a i {
+    color: #fff;
+}
+
+.header-footer .footer1 .social-logo a:hover {
+    background: #544a4a;
+    transition: 0.5s;
+}
+
+.copyright {
+    color: #fff;
+    margin-top: 30px;
+}
+
+/* Menu HMTL */
+
+.search-recipe {
+    display: flex;
+    margin-top: 15px;
+    text-align: center;
+    justify-content: center;
+}
+
+.search-recipe input {
+    background: #fff;
+    margin-right: 0px;
+    padding: 10px;
+    border-radius: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border: none;
+    width: 250px;
+    outline: none;
+}
+
+.search-recipe button {
+    background: #fff;
+    margin-left: 0px;
+    padding: 10px;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border: none;
+    outline: none;
+}
+
+.error {
+    display: none;
+    font-size: 13px;
+    /* margin-top: 15px; */
+    text-align: center;
+    color: #f79999;
+    /* background: #fff; */
+    height: 15px;
+    width: 350px;
+    margin: 15px auto 0;
+    border-radius: 20px;
+}
+
+#result-recipe {
+    display: grid;
+    grid-template-columns: repeat(5, 0.1fr);
+    justify-content: center;
+    grid-gap: 10px;
+}
+
+.result {
+    display: grid;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+    /* display: none; */
+}
+
+.result div {
+    height: 275px;
+    width: 200px;
+    background: #fff;
+    padding: 5px;
+    border-radius: 7px;
+    cursor: pointer;
+    align-items: center;
+}
+
+.result div img {
+    height: 220px;
+    width: 190px;
+    border-radius: 7px;
+    border: 1px solid;
+}
+
+.result .card div h5 {
+    font-size: 15px;
+    color: #000;
+}
+
+.result .card div p {
+    font-size: 14px;
+    color: #000;
+}
+
+/* about HTML */
+
+.about {
+    margin-top: 15px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.about img {
+    width: 700px;
+    height: 400px;
+    border-radius: 15px;
+}
+
+.words-about {
+    background: #fff;
+    width: 700px;
+    margin: 30px auto 0;
+    text-align: left;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.words-about p {
+    font-size: 13px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Contacts HMTL */
+
+.contacts {
+    margin-top: 15px;
+    background: #faf3c9;
+    width: 700px;
+    margin: 15px auto 0px;
+    border-radius: 5px;
+    display: flex;
+    padding: 10px;
+}
+
+.contacts h3 {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.contacts-form {
+    display: grid;
+}
+
+.contacts-form h4 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.contacts-form input {
+    width: 250px;
+    margin-bottom: 11px;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.contacts-form .message {
+    width: 350px;
+    height: 100px;
+}
+
+.contacts-form button {
+    width: 50px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    padding: 2px;
+    background: #89ad61;
+}
+
+.contacts-form button:hover {
+    background: #9bb084;
+    transition: 0.3s;
+}
+
+.office {
+    width: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    /* margin: 20px 5px 20px 200px; */
+    background: rgb(183, 241, 183);
+    border-radius: 7px;
+    padding: 5px;
+}
+
+.office h5 {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #5aa5fc;
+    font-weight: 100;
+}
+
+.office p {
+    margin-top: 6px;
+    padding-top: 7px;
+    font-size: 11px;
+    border-top: 1px solid;
+}
+
+
+/* Responsive */
+
+@media (max-width: 1099px) {
+    .foods-recipes {
+        display: grid;
+        grid-template-columns: repeat(3, 0.1fr);
+    }
+    
+    .foods-recipes div img {
+        height: 250px;
+        width: 220px;
+        border-radius: 7px;
+        border: 1px solid;
+    }
+}
+
+@media (max-width: 799px) {
+    .gallery {
+        width: 300px;
+        display: grid;
+    }
+
+    .gallery div {
+        width: 100%;
+        gap: 5px;
+        padding: 10px;
+    }
+
+    .gallery div img {
+        height: 160px;
+        width: 130px;
+        transition: transform 0.5s;
+        margin: 3px;
+        border-radius: 3px;
+    }
+
+    .foods-recipes {
+        display: grid;
+        grid-template-columns: repeat(2, 0.1fr);
+        justify-content: center;
+        grid-gap: 20px;
+        /* display: none; */
+    }
+
+
+    /* Menu */
+
+    #result-recipe {
+        display: grid;
+        grid-template-columns: repeat(2, 0.1fr);
+        justify-content: center;
+        grid-gap: 10px;
+    }
+
+    /* About */
+
+    .about img {
+        width: 90%;
+        height: 250px;
+        border-radius: 15px;
+    }
+
+    .words-about {
+        margin-top: 5px;
+        width: 90%;
+        text-align: left;
+    }
+
+    /* Contacts */
+
+    .contacts {
+        width: 90%;
+        display: grid;
+    }
+
+    .office {
+        width: 70%;
+        margin-left: 3px;
+    }
+}
+
+@media (max-width: 477px) {
+    .content h4 {
+        font-size: 23px;
+        color: #fff;
+    }
+    
+    .content p {
+        font-size: 13px;
+        margin-top: 7px;
+        color: #fff;
+    }
+
+    .gallery {
+        width: 300px;
+        display: grid;
+    }
+
+    .gallery div {
+        width: 100%;
+        gap: 5px;
+        padding: 10px;
+    }
+
+    .gallery div img {
+        height: 150px;
+        width: 120px;
+        margin: 3px;
+        border-radius: 3px;
+    }
+
+    .foods-recipes {
+        display: grid;
+        grid-template-columns: repeat(2, 0.1fr);
+        justify-content: center;
+        grid-gap: 20px;
+        /* display: none; */
+    }
+    
+    .foods-recipes div img {
+        height: 190px;
+        width: 160px;
+        border-radius: 7px;
+        border: 1px solid;
+    }
+
+    /* Menu */
+
+    #result-recipe {
+        display: grid;
+        grid-template-columns: repeat(2, 0.1fr);
+        justify-content: center;
+        grid-gap: 10px;
+    }
+
+    .result div {
+        height: 245px;
+        width: 175px;
+    }
+
+    .result div img {
+        height: 190px;
+        width: 160px;
+    }
+
+    /* Contacts */
+
+    .contacts-form .message {
+        width: 300px;
+        height: 100px;
+    }
+
+}
+
+@media (max-width: 377px) {    
+    .content h4 {
+        font-size: 20px;
+        color: #fff;
+    }
+    
+    .content p {
+        font-size: 15px;
+        margin-top: 7px;
+        color: #fff;
+    }
+
+    .gallery {
+        width: 300px;
+    }
+
+    .gallery div img {
+        height: 130px;
+        width: 110px;
+    }
+
+    .foods-recipes {
+        display: grid;
+        grid-template-columns: repeat(2, 0.1fr);
+    }
+    
+    .foods-recipes div img {
+        height: 170px;
+        width: 150px;
+        border-radius: 7px;
+        border: 1px solid;
+    }
+
+    /* Menu */
+
+    .result div {
+        height: 223px;
+        width: 165px;
+    }
+
+    .result div img {
+        height: 170px;
+        width: 150px;
+    }
+}
